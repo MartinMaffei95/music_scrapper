@@ -3,11 +3,7 @@ const randomUseragent = require('random-useragent');
 const fs = require('fs');
 const path = require('path');
 
-//TODO: trasnform link who add give us to link to web use
-// app => https://open.spotify.com/playlist/37i9dQZF1DX1mdFJSflVUV?si=f4c566184b8741a3
-// web => https://open.spotify.com/playlist/37i9dQZF1DX1mdFJSflVUV?si=f4c566184b8741a3&nd=1
 const autoScroll = async (page, queryMain) => {
-  // console.log('scrolling');
   await page.evaluate(async () => {
     await new Promise((resolve, reject) => {
       let main = document.querySelector(

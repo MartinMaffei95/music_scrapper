@@ -8,6 +8,7 @@ La app simula el comportamiento del usuario y automatiza la creacion de una play
 Por debajo utiliza [puppeteer](https://pptr.dev/) para hacer WebScrapping de las listas.
 
 #Badges
+![Alt Text](gifMS1.gif)
 
 <!--
 On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
