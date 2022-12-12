@@ -5,10 +5,8 @@ Permite pasar tus playlists de Spotify a YT-Music facilmente.
 #Descripción
 
 La app simula el comportamiento del usuario y automatiza la creacion de una playlist en YouTube-Music en base a otra de Spotify.
-Por debajo utiliza [puppeteer](https://pptr.dev/) para hacer WebScrapping de las listas.
+Por debajo utiliza [puppeteer](https://pptr.dev/) para hacer WebScrapping de la palylist.
 
-#Badges
-Vamos a la accion!
 Ingresa la url de tu lista de spotify
 ![Enter your Spotify url](https://github.com/MartinMaffei95/music_scrapper/blob/main/rmass/gifMS1.gif)
 Esperamos a que el programa nos devuelva la url de YouTube Music!
