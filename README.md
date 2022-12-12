@@ -1,8 +1,8 @@
-#MusicScrapper
+# MusicScrapper
 
 Permite pasar tus playlists de Spotify a YT-Music facilmente.
 
-#Descripción
+# Descripción
 
 La app simula el comportamiento del usuario y automatiza la creacion de una playlist en YouTube-Music en base a otra de Spotify.
 Por debajo utiliza [puppeteer](https://pptr.dev/) para hacer WebScrapping de la palylist.
@@ -12,7 +12,8 @@ Ingresa la url de tu lista de spotify
 Esperamos a que el programa nos devuelva la url de YouTube Music!
 ![Get a link with your new url](https://github.com/MartinMaffei95/music_scrapper/blob/main/rmass/gifMS2.gif)
 
-#Instalar
+# Instalar
+
 Copia o descarga el fichero desde github.
 
 En la carpeta raiz usaremos [node](https://nodejs.org/es/download/) para instalar los paquetes de MusicScrapper.
@@ -21,7 +22,7 @@ En la carpeta raiz usaremos [node](https://nodejs.org/es/download/) para instala
 npm i
 ```
 
-#Como usar
+# Como usar
 
 Esta version no contiene GUI por lo tanto debemos ejecutarlo desde consola.
 
@@ -49,13 +50,16 @@ prompt: Enter the playlist URL of spotify:
 > Una vez oprimamos "Enter" comenzará a correr el programa.
 
 Una vez se este ejecutando el programa simulará la actividad del usuario haciendo el siguiente circuito
-En SPOTIFY:
+
+### En SPOTIFY:
 
 > Ingresa en la url de playlist
+
 > Obtiene los datos necesarios para crear la nueva lista
+
 > Una vez almacenada toda la data cambia de pestaña
 
-    En YT-Music
+### En YT-Music
 
 > Chequea si estamos logeados(En base a cookies)
 
@@ -65,11 +69,11 @@ En SPOTIFY:
 
 > Una vez finalizado todo el proceso nos retornara el Link de la lista creada para que la visitemos.
 
-#Sobre el autor
+# Sobre el autor
 
 Te invito a seguirme en [LinkedIn](https://www.linkedin.com/in/martinmaffei95/)
 Y a ver mi [Portafolio](https://portafolio-mu-three.vercel.app/)
 
-#Licencia
+# Licencia
 
 [MIT](https://choosealicense.com/licenses/mit/)
