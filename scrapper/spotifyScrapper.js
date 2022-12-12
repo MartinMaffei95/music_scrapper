@@ -89,7 +89,6 @@ const spotifyScrapper = async (playlistUrl) => {
       const getNumber = await page.evaluate((s) => s.innerText, number);
       const songName = await song.$('a div.kHHFyx');
       const songName_name = await page.evaluate((s) => s.innerText, songName);
-      // // const songName_href =
       const songArtists = await song.$$('span.dvSMET a');
       let songArtist_names = [];
       for (artist of songArtists) {
@@ -110,8 +109,6 @@ const spotifyScrapper = async (playlistUrl) => {
       )
         playlist_songs.push(songObj);
       lastScrapedItem = getNumber;
-
-      // console.log(`${getNumber}) ${songName_name} de ${songArtist_name}`);
     }
     await autoScroll(page);
 
@@ -124,8 +121,6 @@ const spotifyScrapper = async (playlistUrl) => {
   };
 
   await scrapSongs();
-
-  //   console.log('ARRAY DE CANCIONES :', playlist_songs);
 
   playlist.playlist_songs = playlist_songs;
   fs.writeFileSync(

@@ -3,9 +3,6 @@ const fs = require('fs');
 const { loginWithGoogle } = require('./YTLogin');
 const testArr = require('../scrapper/playlists/canta_en_el_auto');
 const { Console } = require('console');
-// TODO: refinar scrapping para que vea entre la seccion de "Mejor resultado" y
-// "canciones". Seleccione la que tenga el mismo nombre como titulo
-// y ademas se asegure que diga "Canción"
 
 const isTheSong = (songToFind, searchResult) => {
   const regex = /[-]/g;
@@ -52,7 +49,6 @@ const normalize = (
   onlyBeforeMidDash = false,
   word = ''
 ) => {
-  // console.log(string);
   const cancelWord = new RegExp(word + '\b', 'g');
   const bracketsRegex = /\([^)]*\)/g;
 
@@ -69,8 +65,6 @@ const normalize = (
     .replace(/remix\b/g, '')
     .replace(cancelWord, '')
     .replace(/[ \t]{2,}/g, ' ');
-
-  // console.log(normalizedString);
 
   return normalizedString;
 };
@@ -121,19 +115,6 @@ const includesNameAndArtist = (
   console.log('xxx NO CONCUERDA', songTitle, songArtist, songResult);
   return false;
 };
-
-// ** NO SE AUTO COMPLETO ** //
-// https://music.youtube.com/search?q=Una+Noche+en+Medellín+Cris+Mj
-// . 14/100 Cancion:  Una Noche en Medellín | Artista:  Cris Mj
-// >>> Agregado a lista de reproducción
-// https://music.youtube.com/search?q=Tu+Turrito+Rei
-// . 42/100 Cancion:  Tu Turrito | Artista:  Rei
-// >>> Agregado a lista de reproducción
-// https://music.youtube.com/search?q=Tacones+Rojos+Sebastian+Yatra
-// . 78/100 Cancion:  Tacones Rojos | Artista:  Sebastian Yatra
-// >>> Agregado a lista de reproducción
-//https://music.youtube.com/search?q=Para+No+Verte+Más+La+Mosca+Tse-Tse
-// . 99/100 Cancion:  Para No Verte Más | Artista:  La Mosca Tse-Tse
 
 const getSearchUri = (string) => {
   const chars = {
@@ -189,7 +170,6 @@ const ytMusicScrapper = async (playlistToConvert) => {
       let haveResult = false;
 
       for (section of sections) {
-        // console.log(1, haveResult);
         if (haveResult === true) {
           break;
         }
@@ -212,11 +192,8 @@ const ytMusicScrapper = async (playlistToConvert) => {
             'div#contents ytmusic-responsive-list-item-renderer'
           );
           //Scraping every song+
-          // console.log(2, haveResult);
-          // if (haveResult === true) return;
 
           for (songOfSection of songs) {
-            // console.log(2, haveResult);
             if (haveResult === true) return (haveResult = true);
             const title_node = await songOfSection.$(
               'div.flex-columns div.title-column yt-formatted-string'
@@ -254,7 +231,6 @@ const ytMusicScrapper = async (playlistToConvert) => {
 
             switch (filter) {
               case 'Canción':
-                // console.log(filter, haveResult);
                 if (haveResult === true) return;
                 album = aTags.pop();
                 artist = aTags;
@@ -311,7 +287,6 @@ const ytMusicScrapper = async (playlistToConvert) => {
                 break;
               case 'Video':
                 artist = await aTags;
-                // console.log(filter, haveResult);
 
                 if (haveResult === true) return;
                 if (
@@ -378,7 +353,6 @@ const ytMusicScrapper = async (playlistToConvert) => {
 
     try {
       // ## traverse a list and make click on "Add to list" button
-      // console.log('seguimossssss');
       const listItems = await page.$$(
         'ytmusic-menu-navigation-item-renderer.style-scope.ytmusic-menu-popup-renderer'
       );
