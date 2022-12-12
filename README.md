@@ -38,7 +38,7 @@ G_USER = yourYTMusicUser@mail.com
 G_PASS = yourYTMusicPass
 ```
 
-> Estos datos son utilizados unicamente para el logeo en YT Music que permitira crear la lista.
+> Estos datos son utilizados unicamente para el logeo en YT Music que permitira crear la lista. Nunca son reutilizados o almacenados
 
 Dentro de la carpeta raiz(MusiCrapper) ejecutaremos el comando
 
