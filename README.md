@@ -8,14 +8,11 @@ La app simula el comportamiento del usuario y automatiza la creacion de una play
 Por debajo utiliza [puppeteer](https://pptr.dev/) para hacer WebScrapping de las listas.
 
 #Badges
-![Alt Text](https://github.com/MartinMaffei95/music_scrapper/blob/main/rmass/gifMS1.gif)
-![Alt Text](https://github.com/MartinMaffei95/music_scrapper/blob/main/rmass/gifMS2.gif)
-
-<!--
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-#Visuals
-
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method. -->
+Vamos a la accion!
+Ingresa la url de tu lista de spotify
+![Enter your Spotify url](https://github.com/MartinMaffei95/music_scrapper/blob/main/rmass/gifMS1.gif)
+Esperamos a que el programa nos devuelva la url de YouTube Music!
+![Get a link with your new url](https://github.com/MartinMaffei95/music_scrapper/blob/main/rmass/gifMS2.gif)
 
 #Instalar
 Copia o descarga el fichero desde github.
@@ -70,9 +67,10 @@ En SPOTIFY:
 
 > Una vez finalizado todo el proceso nos retornara el Link de la lista creada para que la visitemos.
 
-#Authors and acknowledgment
+#Sobre el autor
 
-Show your appreciation to those who have contributed to the project.
+Te invito a seguirme en [LinkedIn](https://www.linkedin.com/in/martinmaffei95/)
+Y a ver mi [Portafolio](https://portafolio-mu-three.vercel.app/)
 
 #Licencia
 
